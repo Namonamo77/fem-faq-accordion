@@ -3,6 +3,7 @@
     --Light-pink: hsl(275, 100%, 97%);
     --Grayish-purple: hsl(292, 16%, 49%);
     --Dark-purple: hsl(292, 42%, 14%);
+    --Purple: hsl(292, 94%, 42%);
 }
 
 *, *::after, *::before {
@@ -27,9 +28,10 @@ h1, h2, p{
 
 main{
     background: var(--White);
-    margin: 2em;
+    margin: 2em auto;
     padding: 2em;
     border-radius: 4px;
+    width: 375px;
 }
 
 .faq-title{
@@ -46,39 +48,60 @@ main{
     }
 }
 
-.faq{
+.accordion{
     border-bottom: 2px solid var(--Light-pink);
     padding-bottom: 2em;
     margin-bottom: 2em;
-
-    .question{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 1em;
-        
-        .question-text{
-            font-size: 1.125rem;
-            font-weight: 700;
-            width: 70%;
-        }
-
-        button{
-            border: none;
-            background: transparent;
-            cursor: pointer;
-        }
-    }
-
-    .answer{
-        font-size: .9rem;
-        color: var(--Grayish-purple);
-    }
 }
-.faq:last-child{
+.accordion-btn{
+    background: transparent;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .5em; 
+    text-align: left;
+    width: 100%;
+    
+}
+.accordion-btn:hover{
+    color: var(--Purple);
+    cursor: pointer;
+}
+.question-text{
+    font-size: 1.125rem;
+    font-weight: 700;
+    width: 80%;
+}
+.accordion:last-child{
     margin-bottom: 0;
     border-bottom: 0px;
     padding-bottom: 0;
+}
+
+
+.close-btn, .open-btn{
+    width: 40px;
+    height: 40px;
+    border: none;  
+}
+.close-btn{
+    display: none;
+}
+
+.answer{
+    display: none;
+    margin-top: 1em;
+    font-size: .9rem;
+    color: var(--Grayish-purple);
+}
+
+.active{
+    display: block;
+   
+}
+.inactive{
+    display: none;
 }
 
 @media (min-width: 768px){
@@ -87,10 +110,7 @@ main{
         background-color: var(--Light-pink);
     }
 
-    main{
-        width: 375px;
-        margin: 2em auto;
-    }
+   
 }
 
 
