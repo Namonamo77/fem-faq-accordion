@@ -12,11 +12,14 @@
 
 body{
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background: url(./images/background-pattern-mobile.svg) no-repeat;
     background-color: var(--Light-pink);
     background-size: 100%;
     background-position: top center;
-    width: 100vw;
     height: 100vh;
     font-family: "Work Sans", sans-serif;
     color: var(--Dark-purple);
