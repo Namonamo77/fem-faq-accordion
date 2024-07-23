@@ -1,4 +1,4 @@
-let allAccordions = document.querySelectorAll("#show-btn")
+let allAccordions = document.querySelectorAll(".accordion-btn")
 
 function toggleAccordions(){
     this.children[1].classList.toggle("inactive")
