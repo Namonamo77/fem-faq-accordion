@@ -3,7 +3,7 @@
     --Light-pink: hsl(275, 100%, 97%);
     --Grayish-purple: hsl(292, 16%, 49%);
     --Dark-purple: hsl(292, 42%, 14%);
-    --Purple: hsl(292, 94%, 42%);
+    --Purple: hsl(281, 86%, 54%);
 }
 
 *, *::after, *::before {
@@ -24,26 +24,29 @@ body{
 
 h1, h2, p{
     margin: 0;
+    padding: 0;
 }
 
 main{
     background: var(--White);
     margin: 2em auto;
-    padding: 2em;
+    padding: 3em;
     border-radius: 4px;
     width: 375px;
 }
 
 .faq-title{
     display: flex;
-    margin-bottom: 2em;
+    margin-bottom: 2.5em;
+    align-items: center;
 
     h1{
-        font-size: 2rem;
-        margin-left: .5em;
+        font-size: 3.75rem;
+        margin-left: .25em;
     }
     img{
-        transform: scale(70%);
+        width: 40px;
+        height: 40px;
         margin: 0;
     }
 }
@@ -68,10 +71,15 @@ main{
     color: var(--Purple);
     cursor: pointer;
 }
+.accordion-btn:focus{
+    color: var(--Purple);
+    background: transparent;
+}
 .question-text{
-    font-size: 1.125rem;
+    font-size: 1.25rem;
     font-weight: 700;
-    width: 80%;
+    width: 85%;
+    margin-left: -.3em;
 }
 .accordion:last-child{
     margin-bottom: 0;
@@ -81,8 +89,8 @@ main{
 
 
 .close-btn, .open-btn{
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border: none;  
 }
 .close-btn{
@@ -91,8 +99,8 @@ main{
 
 .answer{
     display: none;
-    margin-top: 1em;
-    font-size: .9rem;
+    margin-top: 2em;
+    font-size: 1rem;
     color: var(--Grayish-purple);
 }
 
@@ -109,7 +117,9 @@ main{
         background: url("./images/background-pattern-desktop.svg") no-repeat;
         background-color: var(--Light-pink);
     }
-
+    main{
+        width: 680px;
+    }
    
 }
 
