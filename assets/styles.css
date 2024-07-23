@@ -33,6 +33,7 @@ main{
     padding: 3em;
     border-radius: 4px;
     width: 375px;
+    box-shadow: 0px 0px 26px rgba(120, 104, 123, 0.2);
 }
 
 .faq-title{
